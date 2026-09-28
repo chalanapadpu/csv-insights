@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSV Insights</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>CSV Insights</h1>
+    <p class="sub">Drop a CSV file and get instant stats. Everything runs in your browser.</p>
+
+    <label id="dropzone" class="dropzone">
+      <input type="file" id="fileInput" accept=".csv" hidden>
+      <span id="dropText">Drag &amp; drop a CSV here, or click to choose</span>
+    </label>
+
+    <p id="error" class="error" hidden></p>
+
+    <section id="results" hidden>
+      <div class="cards" id="cards"></div>
+      <h2>Data preview (first 20 rows)</h2>
+      <div class="table-wrap"><table id="preview"></table></div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="stats.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
